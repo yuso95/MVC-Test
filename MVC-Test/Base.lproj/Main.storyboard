@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecx-3U-hD6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Prn-TY-eys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE3-em-SBV" customClass="BaseView" customModule="MVC_Test" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ar-JM-tLm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pNx-yA-fvx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLo-re-u7V">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c2R-ND-4nt"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renameBTNPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNR-Yp-1DR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eE3-em-SBV" secondAttribute="bottom" constant="184" id="4xV-O3-mdA"/>
+                            <constraint firstItem="ecx-3U-hD6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="81" id="6xe-kF-xMh"/>
+                            <constraint firstItem="LLo-re-u7V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Die-IT-rR8"/>
+                            <constraint firstItem="0Ar-JM-tLm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="81" id="EMJ-m1-Gei"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eE3-em-SBV" secondAttribute="trailing" constant="22" id="Fry-Zp-TLH"/>
+                            <constraint firstItem="LLo-re-u7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="GIo-5x-Tk5"/>
+                            <constraint firstItem="eE3-em-SBV" firstAttribute="top" secondItem="ecx-3U-hD6" secondAttribute="bottom" constant="125" id="HUH-Mq-OAL"/>
+                            <constraint firstItem="eE3-em-SBV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PYp-Fu-DbL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Ar-JM-tLm" secondAttribute="trailing" constant="82" id="Uok-Vt-GPO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LLo-re-u7V" secondAttribute="trailing" constant="131" id="VXo-uv-cMf"/>
+                            <constraint firstItem="ecx-3U-hD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjp-y1-t5v"/>
+                            <constraint firstItem="eE3-em-SBV" firstAttribute="top" secondItem="LLo-re-u7V" secondAttribute="bottom" constant="20" id="WbM-YY-vdQ"/>
+                            <constraint firstItem="eE3-em-SBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X1K-NQ-449"/>
+                            <constraint firstItem="ecx-3U-hD6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ayd-hw-dgp"/>
+                            <constraint firstItem="0Ar-JM-tLm" firstAttribute="top" secondItem="ecx-3U-hD6" secondAttribute="bottom" constant="26" id="f0p-ae-qz4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ecx-3U-hD6" secondAttribute="trailing" constant="82" id="f5w-Ch-dyI"/>
+                            <constraint firstItem="eE3-em-SBV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="fLT-FM-7XC"/>
+                            <constraint firstItem="LLo-re-u7V" firstAttribute="top" secondItem="0Ar-JM-tLm" secondAttribute="bottom" constant="19" id="frC-bH-dgq"/>
+                            <constraint firstItem="0Ar-JM-tLm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gde-rQ-UL9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLBL" destination="ecx-3U-hD6" id="Ooo-WR-BNR"/>
+                        <outlet property="renameTFD" destination="0Ar-JM-tLm" id="Sn2-HI-Hqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

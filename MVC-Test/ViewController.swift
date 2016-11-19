@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameLBL: UILabel!
+    
+    @IBOutlet weak var renameTFD: UITextField!
+    
+    @IBAction func renameBTNPressed(_ sender: UIButton) {
+        
+        if let text = renameTFD.text, text != "" {
+            
+            nameLBL.text = text
+        }
+    }
+    
+    let person1 = Person(firstName: "Ousmane", lastName: "NS_Yuso")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        nameLBL.text = person1.fullName
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+   
 
 }
 
